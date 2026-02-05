@@ -26,6 +26,7 @@ services:
       - /opt/keycloak-certs/tls.crt:/etc/x509/https/tls.crt:ro
       - /opt/keycloak-certs/tls.key:/etc/x509/https/tls.key:ro
       - ./providers/thakacreations.keycloak-2fa-sms-authenticator.jar:/opt/keycloak/providers/thakacreations.keycloak-2fa-sms-authenticator.jar
+      - ./providers/keycloak-usermanagement-provider-1.0.0-all.jar:/opt/keycloak/providers/keycloak-usermanagement-provider-1.0.0-all.jar
       - keycloak_data:/opt/keycloak/data
     command:
       - start
